@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --colors --progress",
-    "watch": "npm run build -- --watch"
+    "build-dev": "NODE_ENV='development' npm run build",
+    "watch": "npm run build -- --watch",
+    "server": "./node_modules/.bin/webpack-dev-server --inline --open"
   },
   "keywords": [],
   "author": "Diego Collares <diego.collares@gmail.com> (https://medium.com/@senhordim)",
@@ -16,5 +18,9 @@
     "babel-preset-es2015-native-modules": "^6.9.4",
     "webpack": "^2.2.0",
     "webpack-livereload-plugin": "^0.10.0"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   }
 }
